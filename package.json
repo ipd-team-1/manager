@@ -1,0 +1,28 @@
+{
+  "name": "manager",
+  "version": "1.0.0",
+  "description": "Manager is a SPA for uploading and managing users and images.",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "node_modules/.bin/webpack --watch -d",
+    "host": "node_modules/.bin/http-server dist/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-plugin-import": "^2.1.0",
+    "html-loader": "^0.4.4",
+    "http-server": "^0.9.0",
+    "node-sass": "^3.11.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "axios": "^0.15.2",
+    "vue": "^2.0.5"
+  }
+}
