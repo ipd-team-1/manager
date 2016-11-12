@@ -8,11 +8,13 @@ module.exports = {
     template,
     methods: {
       onAddImageFormSubmit() {
-        ImageHandler.addImage();
+        ImageHandler.addImage(this.name, this.url);
       },
     },
     data() {
       return {
+        name: '',
+        url: '',
       };
     },
   },

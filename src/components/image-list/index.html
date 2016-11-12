@@ -1,7 +1,7 @@
 <div class="cmp-image-list">
   <form id="form-image-add" v-on:submit.prevent="onAddImageFormSubmit">
-    Name: <input type="text" name="name"><br>
-    Url: <input type="text" name="url"><br>
+    <input type="text" name="name" placeholder="Name" v-model="name"><br>
+    <input type="text" name="url" placeholder="Url" v-model="url"><br>
     <input type="submit" value="Submit"></input>
   </form>
 </div>
