@@ -5,6 +5,7 @@ function componentize(component) {
 }
 
 componentize(require('./components/root'));
+componentize(require('./components/image-list'));
 
 /* eslint-disable no-new */
 new Vue({
