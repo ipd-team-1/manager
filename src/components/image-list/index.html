@@ -1,7 +1,18 @@
 <div class="cmp-image-list">
   <form id="form-image-add" v-on:submit.prevent="onAddImageFormSubmit">
-    <input type="text" name="name" placeholder="Name" v-model="name"><br>
-    <input type="text" name="url" placeholder="Url" v-model="url"><br>
+    <input type="text" name="name" placeholder="Name" v-model="form.name"><br>
+    <input type="text" name="url" placeholder="Url" v-model="form.url"><br>
     <input type="submit" value="Submit"></input>
   </form>
+
+  <ul>
+    <li v-for="image in images">
+      <button v-on:click="onDeleteImageClicked(image)">X</button>
+      {{ image.name }}
+      <div
+        class="image-preview"
+        v-bind:style="{ backgroundImage: 'url(' + image.url + ')'}">
+      </div>
+    </li>
+  </ul>
 </div>

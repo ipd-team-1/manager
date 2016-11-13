@@ -1,7 +1,12 @@
 const axios = require('axios');
 
 module.exports = {
-  addImage(name, url) {
+  getImages(callback) {
+    return axios.get('/api/images').then((res) => {
+      callback(res.data);
+    });
+  },
+  addImage(name, url, callback) {
     axios({
       method: 'post',
       url: '/api/images',
@@ -10,8 +15,13 @@ module.exports = {
         url,
       },
     })
-      .then((res) => {
-        console.log(res);
+      .then(() => {
+        callback();
       });
   },
+  deleteImage(imageId, callback) {
+    axios.delete(`/api/images/${imageId}`).then((res) => {
+      callback();
+    });
+  }
 };
